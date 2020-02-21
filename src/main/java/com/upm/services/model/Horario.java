@@ -1,5 +1,7 @@
 package com.upm.services.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
@@ -9,9 +11,8 @@ public class Horario {
 
     @Id
     private Integer id;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd@HH:mm:ss")
     private Date fecha;
-    private Integer hora;
-    private Integer minuto;
 
     public Integer getId() {
         return id;
@@ -27,22 +28,6 @@ public class Horario {
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
-    }
-
-    public Integer getHora() {
-        return hora;
-    }
-
-    public void setHora(Integer hora) {
-        this.hora = hora;
-    }
-
-    public Integer getMinuto() {
-        return minuto;
-    }
-
-    public void setMinuto(Integer minuto) {
-        this.minuto = minuto;
     }
 
     @Override
