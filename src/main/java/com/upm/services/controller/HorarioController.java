@@ -1,5 +1,7 @@
 package com.upm.services.controller;
 
+import com.upm.services.model.Horario;
+import com.upm.services.service.HorarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,7 +12,7 @@ import java.util.List;
 
 @RestController
 public class HorarioController {
-/*
+
     @Autowired
     HorarioService horarioService;
 
@@ -24,10 +26,9 @@ public class HorarioController {
     public List<Horario> getHorarioList(){
         return this.horarioService.findAll();
     }
-    */
 
-    @GetMapping(value="/horario")
-    public String getHorarioList(){
-        return "Devolviendo";
+    @GetMapping(value="/horario1")
+    public String getSaludo(){
+        return "Devolviendo un afectuoso saludo";
     }
 }
